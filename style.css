@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: lightblue;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    min-width: 1050px;
+
+}
+
+.footer{
+    margin-top: 42rem;
+    margin-right: 30rem;
+    font-size: small;
+}
+
+section{
+    background: whitesmoke;
+    border-radius: 7px;
+}
+
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0 ;
+}
+
+.tools-board .row{
+    margin-bottom: 20px;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option :where(span, label){
+    cursor: pointer;
+    color: darkslategray;
+    padding-left: 10px;
+}
+
+.option #fill-color{
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+.fill{
+    padding-left: 1.1rem;
+}
+
+.row:first-child{
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+
+.row:nth-child(2){
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+
+.row:nth-child(3){
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+
+.drawing-board{
+    flex: 1;
+}
+
+.option:is(:hover) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option:is(:hover, .active) :where(span, label){
+    color: blue;
+}
+
+#fill-color:checked ~ label{
+    color: blue;
+}
+
+.drawing-board{
+    flex: 1;
+}
+
+.option #size-slider{
+    width: 100;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .option{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option.selected:before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid white;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before{
+    border-color: wheat;
+}
+
+.colors .option:nth-child(1){
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.colors .option:nth-child(2){
+    background-color: black;
+}
+
+.colors .option:nth-child(3){
+    background-color: red;
+}
+
+.colors .option:nth-child(4){
+    background-color: green;
+}
+
+.colors .option:nth-child(5){
+    background-image: linear-gradient(to left top, red, blue, green, yellow, purple, lime, maroon, gray, brown,gold);
+}
+
+
+
+.buttons button{
+    width: 100%;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 0.9rem;
+}
+
+.icons{
+    width: 22px;
+}
+
+.shapes{
+    width: 2px;
+}
+
+.buttons .clear-canvas{
+    color: darkblue;
+    border: 1px solid burlywood;
+}
+
+.buttons .save-img{
+    color: darkblue;
+    border: 1px solid burlywood;
+}
+
+.clear-canvas:hover{
+    background: lightskyblue;
+    color: black;
+}
+
+.buttons .save-img:hover{
+    background: lightskyblue;
+    color: black;
+}
+
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
