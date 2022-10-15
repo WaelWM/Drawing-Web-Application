@@ -25,7 +25,7 @@ In the code snippet above, the decoding type has been declared to manifests as a
 
 ## CSS:
 
-..........
+...........
 
 
 ## JavaScript:
