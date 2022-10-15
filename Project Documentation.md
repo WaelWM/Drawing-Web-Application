@@ -10,7 +10,7 @@ The __HTML__ is used to display the documents or details needed in a web browser
 ```HTML
 <h1> Hello World!!</h1>
 
-
+```
 ## CSS
 
 ..........
