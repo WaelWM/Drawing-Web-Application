@@ -21,6 +21,8 @@ The __HTML__ is used to display the documents or details needed in a web browser
     </head>
 </html> 
 ```
+In the code snippet above, the decoting type has been declared to manifests as a short string of markup that conforms to a particular syntax so that ensures the website is parsed the same way by different web browsers.
+
 ## CSS
 
 ..........
