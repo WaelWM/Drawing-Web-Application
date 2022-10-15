@@ -7,6 +7,9 @@ This project has been developed using HTML, CSS, and JavaScript. This website is
 
 The __HTML__ is used to display the documents or details needed in a web browser. As a result, it is the main important part of this project as it holds the base structure for this website and holds the tags and classes that will be used in the **Cascading Style Sheets and Javascript languages** in order to design and add the needed functionaliies to the website accordingly. 
 
+#HTML 
+Div<>
+
 
 
 ## CSS
