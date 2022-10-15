@@ -3,7 +3,7 @@ This project has been developed using HTML, CSS, and JavaScript. This website is
 
 # Explanation of the Project:
 
-## HTML
+## HTML:
 
 The __HTML__ is used to display the documents or details needed in a web browser. As a result, it is the main important part of this project as it holds the base structure for this website and holds the tags and classes that will be used in the **Cascading Style Sheets and Javascript languages** in order to design and add the needed functionaliies to the website accordingly. 
 
@@ -23,11 +23,11 @@ The __HTML__ is used to display the documents or details needed in a web browser
 ```
 In the code snippet above, the decoding type has been declared to manifests as a short string of markup that conforms to a particular syntax so that ensures the website is parsed the same way by different web browsers. In addtion, the language of the webbage and dictionary neutral text has been declared which both are necessary for the website but not compulsory to declare.  Meanwhile, for the head tag, charest used to specifies the character encoding for the HTML which is UTF-8 (UCS Transformation Format 8). Also, title tag is used to add a tittle for the webbage, and link is used to link the CSS and JS document to the website so they can be all functional together. Meta is used to define the width and salce of the website to fit the device's screen width, and the code in line 20 is used to add an icon to the website.
 
-## CSS
+## CSS:
 
 ..........
-## JavaScript 
+## JavaScript:
 
 ..............
-# Conclusion 
+# Conclusion:
 ...........
