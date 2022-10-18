@@ -107,8 +107,27 @@ in the code above, there are two rows created in the first section and they are 
 Finally, in the HTML code, the last created section is used for the drawing board. The ```<canvas>``` tag in HTML is used to draw graphics on the web page using JavaScript.
 
 ## CSS:
+Now moving on to the CSS part after finsihing the HTML part and create the structur of the drawing website. The CSS will be used to style the webstie by using the classes that has been create. Each class will be called in CSS to syle the sections and rows as required accordingly. 
 
-...........
+```CSS
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: lightblue;
+}
+```
+
+Firstly, the font has been customized and in order to that, there is a need to import the chosen fonts from the particular website. Afther that, the marin, padding, box-sizinz, and font-family properties has been set to style our font as needed.  Furthermore, some properties are needed to style the whole website which is in ```body``` tag. Thus, the display set to flex so this will arrange the elements automatically in a responsive manner. Also, the items and contents have been styled to be in the center adn the heigh and background color is also set. 
 
 
 ## JavaScript:
