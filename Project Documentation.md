@@ -56,7 +56,7 @@ In the code snippet above, the decoding type has been declared to manifests as a
                   </ul>
     </div>
 ```
-Firstly, we need ```div``` tag and intilize a class to it and name the class contianer. This div will contain all of the itmes on the webbage so it will be easier to desing in later in CSS by calling the created class which is ``` class = 'container'```.  
+Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be easier to desing later in CSS by calling the created class.  
 
 ## CSS:
 
