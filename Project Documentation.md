@@ -25,12 +25,12 @@ In the code snippet above, the decoding type has been declared to manifests as a
 ```HTML
 <body>
    <div class="container">
-          <section class="tools-board">
-              <div class="row">
-                  <label class="title">Shapes</label>
-                  <ul class="options">
-                      <li class="option tool" id="rectangle">
-                          <img class="icons" src="assets/icons/rectangle.png"  alt="">
+       <section class="tools-board">
+          <div class="row">
+              <label class="title">Shapes</label>
+              <ul class="options">
+                  <li class="option tool" id="rectangle">
+                      <img class="icons" src="assets/icons/rectangle.png"  alt="">
                           <span>Rectangle</span>
                       </li>
 
@@ -59,45 +59,43 @@ In the code snippet above, the decoding type has been declared to manifests as a
 Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be easier to desing later in CSS by calling the created class. Then, a ```section``` is created which will be utlized to hold all the tools that we need for this drawing website. Inside the the section tag,  there will be the list of options that will appearin the left side of the webstie. For that there will be a need to create another ``` div ```  and initializing a class to it that will be named as a row in order to use t in the CSS to desing the layout of the list. The first row will hold multiple lists that will contain the shapes and the options to fill the shapes.  As shown in the code above, each shape has been created in a list and created a class and an id for each one. For the class it is the same for all shapes as the class will be used to desing the website in the CSS. Meanwhile for the Id, it is an imporatnt for creating the needed funtion to draw the needed shape using JavaScript. Additionally,  ```img``` and ```label``` tags are added to add the icons and names of the shapes in the website. Laslty, the fill option is an ```input``` type which holds the value of ```"checkbox"``` so when checked it will fill the shape. The ```span``` is used  to create an inline container to mark up the needed text. 
 
 ```HTML
-   <div class="row">
-                    <label class="title ">Options</label>
-                    <ul class="options">
-                        <li class="option active tool" id="brush">
-                            <img class="icons" src="assets/icons/brush.png" alt="">
-                            <span>Brush</span>
-                        </li>
-
-                        <li class="option tool" id="eraser">
-                            <img class="icons" src="assets/icons/eraser.png"alt="">
-                            <span>Eraser</span>
-                        </li>
-
-                        <li class="option">
-                            <input type="range" id="size-slider" min="1" max="45" value="10">
-                        </li>
-                    </ul>
-                </div>
+<div class="row">
+       <label class="title ">Options</label>
+       <ul class="options">
+           <li class="option active tool" id="brush">
+               <img class="icons" src="assets/icons/brush.png" alt="">
+               <span>Brush</span>
+           </li>
+           <li class="option tool" id="eraser">
+               <img class="icons" src="assets/icons/eraser.png"alt="">
+               <span>Eraser</span>
+           </li>
+           <li class="option">
+               <input type="range" id="size-slider" min="1" max="45" value="10">
+           </li>
+       </ul>
+</div>
 ```
 The code snippet above shows the second option which holds three main items and they are the brush, eraser, and slider which is for changing the size of the brush, shapes, and eraser. Same as the previos code, the ```class``` and ```id``` will be created in order to desing and add the needed function to the option. For the last list in this option which is the slider, it has an input type of range. Thus, in the website the user can slide to increase or decrease the size of the brush, eraser, or shapes. Id has been created to be used in the JavaScript code, and ```min = "1"``` is for makign the minimum size of brush, eraser, and shape to 1. ```max = "45"``` is for setting the maximum size to 45, and the ```value``` is for making the default size of the brush, eraser, and shapes to 10.  
 
 ```HTML
-    <div class="row colors">
-                    <label class="title">Colors</label>
-                    <ul class="options">
-                    <li class="option"></li>
-                    <li class="option selected"></li>
-                    <li class="option "></li>
-                    <li class="option"></li>
-                    <li class="option">
-                        <input type="color" id="color-picker" value="blue">
-                    </li>
-                    </ul>
-                </div>
+<div class="row colors">
+        <label class="title">Colors</label>
+    <ul class="options">
+            <li class="option"></li>
+            <li class="option selected"></li>
+            <li class="option "></li>
+            <li class="option"></li>
+            <li class="option">
+                <input type="color" id="color-picker" value="blue">
+            </li>
+        </ul>
+</div>
 
-                <div class="row buttons">
-                    <button class="clear-canvas">Clear Canvas</button>
-                    <button class="save-img">Save as Image</button>
-                </div>
+<div class="row buttons">
+    <button class="clear-canvas">Clear Canvas</button>
+    <button class="save-img">Save as Image</button>
+</div>
 ```
 in the code above, there are two rows created in the first section and they are ```row colors``` and ```row buttons```. From their names, one row is used to hold the list of colors, and the other one is for the two buttons that will be used to clear the drawing in the canvans or saving the drawing in the canvas as an imag. For the colors, the list one is an input type which will be as a color picker, and for this the id is initialized in order to create the need function for that in the JavaScript. ```'option selected'``` class is used to put the thrid color option as the defult one. Moreover, for the color picker, the value is sued to but the devult color for it as blue.
 
