@@ -56,7 +56,7 @@ In the code snippet above, the decoding type has been declared to manifests as a
                   </ul>
     </div>
 ```
-Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be easier to desing later in CSS by calling the created class. Then, a ```section``` is created which will be utlized to hold all the tools that we need for this drawing website. Inside the the section tag,   
+Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be easier to desing later in CSS by calling the created class. Then, a ```section``` is created which will be utlized to hold all the tools that we need for this drawing website. Inside the the section tag,  there will be the list of options that will appearin the left side of the webstie. For that there will be a need to create another ``` div ```  and initializing a class to it that will be named as a row in order to use t in the CSS to desing the layout of the list. The first row will hold multiple lists that will contain the shapes.  
 
 ## CSS:
 
