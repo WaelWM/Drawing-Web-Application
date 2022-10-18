@@ -54,50 +54,7 @@ In the code snippet above, the decoding type has been declared to manifests as a
                           <label class="fill" for="fill-color">Fill Color</label>
                       </li>
                   </ul>
-              </div>
-
-              <div class="row">
-                  <label class="title ">Options</label>
-                  <ul class="options">
-                      <li class="option active tool" id="brush">
-                          <img class="icons" src="assets/icons/brush.png" alt="">
-                          <span>Brush</span>
-                     </li>
-
-                      <li class="option tool" id="eraser">
-                          <img class="icons" src="assets/icons/eraser.png"alt="">
-                          <span>Eraser</span>
-                      </li>
-
-                      <li class="option">
-                          <input type="range" id="size-slider" min="1" max="45" value="10">
-                      </li>
-                  </ul>
-              </div>
-
-              <div class="row colors">
-                  <label class="title">Colors</label>
-                  <ul class="options">
-                  <li class="option"></li>
-                  <li class="option selected"></li>
-                  <li class="option "></li>
-                  <li class="option"></li>
-                  <li class="option">
-                      <input type="color" id="color-picker" value="blue">
-                  </li>
-                  </ul>
-              </div>
-
-           <div class="row buttons">
-               <button class="clear-canvas">Clear Canvas</button>
-               <button class="save-img">Save as Image</button>
-           </div>
-       </section>
-       <section class="drawing-board">
-           <canvas></canvas>
-       </section>
-   </div>
-</body>
+    </div>
 ```
 ## CSS:
 
