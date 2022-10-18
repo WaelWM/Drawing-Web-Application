@@ -99,7 +99,14 @@ The code snippet above shows the second option which holds three main items and 
                     <button class="save-img">Save as Image</button>
                 </div>
 ```
-in the code above, there are two rows created in the first section and they are ```row colors``` and ```row buttons```. From their names, one row is used to hold the list of colors, and the other one is for the two buttons that will be used to clear the drawing in the canvans or saving the drawing in the canvas as an imag. For the colors, the list one is an input type which will be as a color picker, and for this the id is initialized in order to create the need function for that in the JavaScript. ```'option selected'``` class is used to put the thrid color option as the defult one. Moreover, for the color picker, the value is sued to but the devult color for it as blue. 
+in the code above, there are two rows created in the first section and they are ```row colors``` and ```row buttons```. From their names, one row is used to hold the list of colors, and the other one is for the two buttons that will be used to clear the drawing in the canvans or saving the drawing in the canvas as an imag. For the colors, the list one is an input type which will be as a color picker, and for this the id is initialized in order to create the need function for that in the JavaScript. ```'option selected'``` class is used to put the thrid color option as the defult one. Moreover, for the color picker, the value is sued to but the devult color for it as blue.
+
+```HTML
+ <section class="drawing-board">
+                <canvas></canvas>
+ </section>
+```
+Finally, in the HTML code, the last created section is used for the drawing board. The ```<canvas>``` tag in HTML is used to draw graphics on a web page using JavaScript.
 
 ## CSS:
 
