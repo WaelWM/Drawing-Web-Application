@@ -127,7 +127,7 @@ body{
 }
 ```
 
-Firstly, the font has been customized and in order to that, there is a need to import the chosen fonts from the particular website. Afther that, the marin, padding, box-sizinz, and font-family properties has been set to style our font as needed.  Furthermore, some properties are needed to style the whole website which is in ```body``` tag. Thus, the display set to flex so this will arrange the elements automatically in a responsive manner. Also, the items and contents have been styled to be in the center adn the heigh and background color is also set. 
+Firstly, the font has been customized and in order to that, there is a need to import the chosen fonts from the particular website. After that, the ```margin```, ```padding```, ````box-sizing```, and ```font-family``` properties has been set to style our font as needed.  Furthermore, some properties are needed to style the whole website which is in ```body``` tag. Thus, the display set to flex so this will arrange the elements automatically in a responsive manner. Also, the items and contents have been styled to be in the center. Height and background color is also set to meet the needed requirements style for this website.
 
 
 ## JavaScript:
