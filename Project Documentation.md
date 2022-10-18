@@ -103,7 +103,7 @@ in the code above, there are two rows created in the first section and they are 
 
 ```HTML
  <section class="drawing-board">
-                <canvas></canvas>
+     <canvas></canvas>
  </section>
 ```
 Finally, in the HTML code, the last created section is used for the drawing board. The ```<canvas>``` tag in HTML is used to draw graphics on a web page using JavaScript.
