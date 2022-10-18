@@ -56,7 +56,7 @@ In the code snippet above, the decoding type has been declared to manifests as a
                   </ul>
     </div>
 ```
-Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be easier to desing later in CSS by calling the created class.  
+Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be easier to desing later in CSS by calling the created class. Then, a ```section``` is created which will be utlized to hold all the tools that we need for this drawing website. Inside the the section tag,   
 
 ## CSS:
 
