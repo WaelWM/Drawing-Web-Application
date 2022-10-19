@@ -157,6 +157,179 @@ section{
 }
 ```
 in the code above, there are four style properties. The first property is the section which hold all the shapes, options, colors, and buttons. The background color of the section is changed to whitesmoke and some spacing has been done using ```padding```. ```padding``` is used to create some space between the elements inside a tag so it looks more organized and appealing. The ```px``` is a sizing unit usually used for small adjustments. There are three elemetns padding in the section, the top padding is ```15px``` the right padding is ```22px``` and the bottom padding is ```0```.  The second property is for the tools-board, which holds only the shapes and fill tools. The ```width``` has been change to 210px and the ```padding``` (spacing) has been adjusted as well. The thrid property is a combination of two html tags for the ```section``` and ```row```, and that is how to combine two properties to style or design them both at once instead of a separate design for each. The ```margin``` is  used to create space around elements, outside of any defined borders. In this, the margin only used to space the bottom part which is change to 20px. The last two properties are used to style the row, options, and option. ```list-style``` is used to define the style of the list since the options or tools are put in a ```li``` tags as seen in the HTML code. In the case of this website , it is set to none as there is no need to put them as a style such as crile or square list. The ```cursor``` property specifies the mouse cursor to be displayed when pointing over an element, and for this the pointer mouse shape is used.
+```CSS
+.option :where(span, label){
+    cursor: pointer;
+    color: darkslategray;
+    padding-left: 10px;
+}
+
+.option #fill-color{
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+}
+
+.fill{
+    padding-left: 1.1rem;
+}
+```
+In these properties, the ```:where``` is a pseudo-class function that takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list. Both ```span```, and ```label``` classes is selelcted as arguments to style them only rather than styling the whole class that hold them. And for the other properties, other styling changes has been made to meet the suitable requirements for this drawing website such as changing the color, height, and width of the seleced HTML tag. 
+
+```css
+.row:first-child{
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+
+.row:nth-child(2){
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+
+.row:nth-child(3){
+    text-align: center;
+    border: 1px solid lightblue;
+    border-radius: 3px;
+}
+
+```
+
+In the above code, ```:first-child``` is a property to style only the first item in the class ```row``` and same goes to ```.row:nth-child(2)``` and ```.row:nth-child(3)``` where they are used to style the second and third ones. 
+
+```CSS
+.option:is(:hover) img{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option:is(:hover, .active) :where(span, label){
+    color: blue;
+}
+
+#fill-color:checked ~ label{
+    color: blue;
+}
+```
+Moving on to another property in CSS which is the hover. The ```hover``` is used to style a specific element once the mouse is hovered into it. For example, if the user hovered into the brush image, the brush will color will be changed indicating that it is under hover. ```.active``` class is used to change the hover setting only if the current item is selected. Thus, one the item is selected from the list such as the brush, the color will be change to blue as specified in the second propriety.
+
+```CSS
+#fill-color:checked ~ label{
+    color: blue;
+}
+
+.option #size-slider{
+    width: 100;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .option{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option.selected:before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid white;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before{
+    border-color: wheat;
+}
+
+.colors .option:nth-child(1){
+    background-color: white;
+    border: 1px solid lightgray;
+}
+
+.colors .option:nth-child(2){
+    background-color: black;
+}
+
+.colors .option:nth-child(3){
+    background-color: red;
+}
+
+.colors .option:nth-child(4){
+    background-color: green;
+}
+
+.colors .option:nth-child(5){
+    background-image: linear-gradient(to left top, red, blue, green, yellow, purple, lime, maroon, gray, brown,gold);
+}
+
+.buttons button{
+    width: 100%;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 0.9rem;
+}
+
+.icons{
+    width: 22px;
+}
+
+.shapes{
+    width: 2px;
+}
+
+.buttons .clear-canvas{
+    color: darkblue;
+    border: 1px solid burlywood;
+}
+
+.buttons .save-img{
+    color: darkblue;
+    border: 1px solid burlywood;
+}
+
+.clear-canvas:hover{
+    background: lightskyblue;
+    color: black;
+}
+
+.buttons .save-img:hover{
+    background: lightskyblue;
+    color: black;
+}
+
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
+```
+There are many similar properties in the classes in the code above which used to style each class or some combined classes in the website. The ```checked``` property in ```fill-color``` will change the color from balck to blue once the fill-color option is checked(selected). ```space-between``` in ```justify-content``` will add space between all the color items evenly. ```position: relative``` places an element relative to its current position without changing the layout around it. ```transition``` is used to make some timing transitions while preforming the styling such as the background color duration transition once it got hovered. The ```transform``` property applies a 2D transformation to an element which allows to rotate or scale the element. The other properties have similar styling that have been used many times or used prepreviously throughout the CSS code in order to give the required website styling result. 
+
 
 
 ## JavaScript:
