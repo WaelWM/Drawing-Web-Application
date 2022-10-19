@@ -129,6 +129,35 @@ body{
 
 Firstly, the font has been customized and in order to that, there is a need to import the chosen fonts from the particular website. After that, the ```margin```, ```padding```, ```box-sizing```, and ```font-family``` properties has been set to style our font as needed.  Furthermore, some properties are needed to style the whole website which is in ```body``` tag. Thus, the display set to flex so this will arrange the elements automatically in a responsive manner. Also, the items and contents have been styled to be in the center. Height and background color is also set to meet the needed requirements style for this website.
 
+```CSS
+section{
+    background: whitesmoke;
+    border-radius: 7px;
+}
+
+.tools-board{
+    width: 210px;
+    padding: 15px 22px 0 ;
+}
+
+.tools-board .row{
+    margin-bottom: 20px;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+```
+in the code above, there are four style properties. The first property is the section which hold all the shapes, options, colors, and buttons. The background color of the section is changed to whitesmoke and some spacing has been done using ```padding```. ```padding``` is used to create some space between the elements inside a tag so it looks more organized and appealing. The ```px``` is a sizing unit usually used for small adjustments. There are three elemetns padding in the section, the top padding is ```15px``` the right padding is ```22px``` and the bottom padding is ```0```.  The second property is for the tools-board, which holds only the shapes and fill tools. The ```width``` has been change to 210px and the ```padding``` (spacing) has been adjusted as well. The thrid property is a combination of two html tags for the ```section``` and ```row```, and that is how to combine two properties to style or design them both at once instead of a separate design for each. The ```margin``` is  used to create space around elements, outside of any defined borders. In this, the margin only used to space the bottom part which is change to 20px. The last two properties are used to style the row, options, and option. ```list-style``` is used to define the style of the list since the options or tools are put in a ```li``` tags as seen in the HTML code. In the case of this website , it is set to none as there is no need to put them as a style such as crile or square list. The ```cursor``` property specifies the mouse cursor to be displayed when pointing over an element, and for this the pointer mouse shape is used.
+
 
 ## JavaScript:
 
