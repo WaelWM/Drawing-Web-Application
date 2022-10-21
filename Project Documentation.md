@@ -334,7 +334,7 @@ There are many similar properties in the classes in the code above which used to
 
 # JavaScript:
 
-Now moving on to a major important part for this website as without JavaScript, the website will have no life because no behaviors or functionalities are programmed in order for our elements to behave the way it should. Without Javascript, the website is just a piece of HTML structure and CSS design, that is why Javascript is important to add the needed functions accordingly. 
+Now moving on to a major important part for this website as without JavaScript, the website will have no life because no behaviors or functionalities are programmed in order for our elements to behave the way it should. In other words, Without JavaScript, the website is just a piece of HTML structure and CSS design, that is why Javascript is important to add the needed functions accordingly. 
 
 ```JavaScript
 const canvas = document.querySelector("canvas"),
@@ -347,6 +347,7 @@ clearCanvas = document.querySelector(".clear-canvas"),
 saveImage = document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
 ```
+Firstly, for adding the functions to the website elements, some variables need to be initiliazed in order to do so. In the code above, there are a list of const virables declared. Const virable is a virable that cannot be redeclared or reassigned. In other words, const virable will be used only in the block it is defined in.  First virable in the list is named as "canvas"  which equal to ```document.querySelector("canvas"). ```document.querySelector``` is used to  find first element that matches the given selector or set of selectors is returned by the querySelector() function. Null is returned if no matches were discovered. In this website case, canvas is the element selected to get the query to find which will be used in the canvas board which has been defind in the HTML file.
 
 # Conclusion:
 ...........
