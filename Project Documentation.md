@@ -336,5 +336,17 @@ There are many similar properties in the classes in the code above which used to
 
 Now moving on to a major important part for this website as without JavaScript, the website will have no life because no behaviors or functionalities are programmed in order for our elements to behave the way it should. Without Javascript, the website is just a piece of HTML structure and CSS design, that is why Javascript is important to add the needed functions accordingly. 
 
+```JavaScript
+const canvas = document.querySelector("canvas"),
+toolBtns = document.querySelectorAll(".tool"), 
+fillColor = document.querySelector("#fill-color"),
+sizeSlider = document.querySelector("#size-slider"),
+colors = document.querySelectorAll(".colors .option"),
+colorPicker = document.querySelector("#color-picker"),
+clearCanvas = document.querySelector(".clear-canvas"),
+saveImage = document.querySelector(".save-img"),
+ctx = canvas.getContext("2d");
+```
+
 # Conclusion:
 ...........
