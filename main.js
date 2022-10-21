@@ -16,17 +16,6 @@ selectedTool = "brush",
 brushWidth = 5,
 selectedColor = "#000";
 
-const setCanvasBackground = () =>{
-    ctx.fillStyle = "#f5f5f5"; // changing the background color when downloading the image so it won't be transparent
-    ctx.fillRect(0, 0, canvas.width, canvas.height); // filling it to the width of the canvas
-    ctx.fillStyle = selectedColor; //returning the fillStyle to the selected color which is the same as the brush color.
-}
-
-window.addEventListener("load", () =>{
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    setCanvasBackground();
-});
 
 const startDraw = (e) =>{
     isDrawing = true;
@@ -124,6 +113,18 @@ clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setCanvasBackground();
 })
+
+const setCanvasBackground = () =>{
+    ctx.fillStyle = "#f5f5f5"; // changing the background color when downloading the image so it won't be transparent
+    ctx.fillRect(0, 0, canvas.width, canvas.height); // filling it to the width of the canvas
+    ctx.fillStyle = selectedColor; //returning the fillStyle to the selected color which is the same as the brush color.
+}
+
+window.addEventListener("load", () =>{
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    setCanvasBackground();
+});
 
 saveImage.addEventListener("click", () => {
     const link = document.createElement("a"); // Creating the <a> element/tag
