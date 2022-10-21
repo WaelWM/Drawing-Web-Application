@@ -351,6 +351,16 @@ Firstly, for adding the functions to the website elements, some variables need t
 
 The ```canvas``` const variable will help to define a function that will allow for drawing in the website's canvas acording to the mouse pointer. ```toolBtns``` is another const vairable used to get all the queries from the ```.tool``` HTML class which then will be used to create a function accordingly. Only one element can be accessed using the ```querySelector()``` function, however all elements can be accessed using the ```querySelectorAll()``` method. Thus, ```querySelectorAll()``` is used in this case. Same goes to the other const define virables which all will be needed once the sepcific HTML elemetns need to be rpogrammed to add a behavior to add once clicked. The hash ```(#)``` in ```fill-color``` refers to  an element with a specific id attribute unlike the dot "(.)"  which refers to a class name. ```ctx``` const virable is defind to get or return a drawing by using the context method ```getContext("2d")``` in the website's canvas.
 
+```JS
+let prevMouseX, prevMouseY, snapshot, 
+isDrawing = false,
+selectedTool = "brush",
+brushWidth = 5,
+selectedColor = "#000";
+```
+Now moving on to another variable declaration type which is ```let```. ```let``` permits to declare variables that are only applicable to the block of code or expression that it is utilised in unlike the const variable type which is the opposite. In this website case, some virable will only need to be used in a scoped block of code that is why let variable is used. Firstly, two variable declared and they are ```prevMouseX```, ```prevMouseY```. These two virables will  help while getting the height and width for the shapes by passing  previous mouse X axis and the previous mouse Y axis.  ```snapshot``` is defind to be used when getting the element pixels data. ```isDrawing``` is a variable defind to initialize a statment to it which is by default making equal to false as initially nothing should be drawing in the website canvas unless the brush or one of the shapes is selected. ```selectedTool``` defind to change the defult selected tool from "brush" to the tool that the user chooses. ```brushWidth``` created to change the brush width/size when the slider option is changed. For now, the defult value for it is set to "5". Lastly,```selectedColor``` is defind to help to change the color from the defult color which is black to the color that the user chooses.
+
+
 
 
 # Conclusion:
