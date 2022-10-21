@@ -3,7 +3,7 @@ This project has been developed using HTML, CSS, and JavaScript. This website is
 
 # Explanation of the Project:
 
-## HTML:
+# HTML:
 
 The __HTML__ is used to display the documents or details needed in a web browser. As a result, it is the main important part of this project as it holds the base structure for this website and holds the tags and classes that will be used in the **Cascading Style Sheets and Javascript languages** in order to design and add the needed functionaliies to the website accordingly. 
 
@@ -106,7 +106,7 @@ in the code above, there are two rows created in the first section and they are 
 ```
 Finally, in the HTML code, the last created section is used for the drawing board. The ```<canvas>``` tag in HTML is used to draw graphics on the web page using JavaScript.
 
-## CSS:
+# CSS:
 Now moving on to the CSS part after finsihing the HTML part and create the structur of the drawing website. The CSS will be used to style the webstie by using the classes that has been create. Each class will be called in CSS to syle the sections and rows as required accordingly. 
 
 ```CSS
