@@ -332,9 +332,9 @@ There are many similar properties in the classes in the code above which used to
 
 
 
-## JavaScript:
+# JavaScript:
 
-..............
+Now moving on to a major important part for this website as without JavaScript, the website will have no life because no behaviors or functionalities are programmed in order for our elements to behave the way it should. Without Javascript, the website is just a piece of HTML structure and CSS design, that is why Javascript is important to add the needed functions accordingly. 
 
 # Conclusion:
 ...........
