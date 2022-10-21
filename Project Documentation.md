@@ -347,7 +347,7 @@ clearCanvas = document.querySelector(".clear-canvas"),
 saveImage = document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
 ```
-Firstly, for adding the functions to the website elements, some variables need to be initiliazed in order to do so. In the code above, there are a list of const virables declared. Const virable is a virable that cannot be redeclared or reassigned. In other words, const virable will be used only in the block it is defined in.  First virable in the list is named as "canvas"  which equal to ```document.querySelector("canvas")```. ```document.querySelector``` is used to  find first element that matches the given selector or set of selectors is returned by the querySelector() function. Null is returned if no matches were discovered. In this website case, canvas is the element selected to get the query to find which will be used in the canvas board which has been defind in the HTML file.
+Firstly, for adding the functions to the website elements, some variables need to be initiliazed in order to do so. In the code above, there are a list of const virables declared. Const virable is a virable that cannot be redeclared or reassigned. In other words, const virable will be used only in the block it is defined in.  First virable in the list is named as "canvas"  which equal to ```document.querySelector("canvas")```. ```document.querySelector``` is used to  find first element that matches the given selector or the set of selectors which is  returned by the querySelector() function. Null is returned if no matches were discovered. In this website case, canvas is the element selected to get the query to find which will be used in the canvas board which has been defind in the HTML file.
 
 # Conclusion:
 ...........
