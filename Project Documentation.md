@@ -380,4 +380,4 @@ Now after defining the essential variables that will be used throught this JavaS
 
 
 # Conclusion:
-...........
+In conclusion, This Paint Website mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint website plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. Overall, the website mostly utilizes The JavaScript  because of the tools that needed to add fucntions to them. Meanwhile, for HTML and CSS 
