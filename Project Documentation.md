@@ -360,6 +360,22 @@ selectedColor = "#000";
 ```
 Now moving on to another variable declaration type which is ```let```. ```let``` permits to declare variables that are only applicable to the block of code or expression that it is utilised in unlike the const variable type which is the opposite. In this website case, the virables will only need to be used in a scoped block of code that is why let variable is used. Firstly, two variable declared and they are ```prevMouseX```, ```prevMouseY```. These two virables will  help while getting the height and width for the shapes by passing  previous mouse X axis and the previous mouse Y axis.  ```snapshot``` is defind to be used when getting the element pixels data. ```isDrawing``` is a variable defind to initialize a statment to it which is by default making equal to false as initially nothing should be drawing in the website canvas unless the brush or one of the shapes is selected. ```selectedTool``` defind to change the defult selected tool from "brush" to the tool that the user chooses. ```brushWidth``` created to change the brush width/size when the slider option is changed. For now, the defult value for it is set to "5". Lastly,```selectedColor``` is defind to help to change the color from the defult color which is black to the color that the user chooses.
 
+```JS 
+const startDraw = (e) =>{
+    isDrawing = true;
+    prevMouseX = e.offsetX; 
+    prevMouseY = e.offsetY; 
+    ctx.beginPath(); 
+    ctx.lineWidth = brushWidth; 
+
+    ctx.strokeStyle = selectedColor;
+    ctx.fillStyle = selectedColor;
+
+    snapshot = ctx.getImageData(0,0, canvas.width, canvas.height);
+}
+```
+Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as a functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The 
+
 
 
 
