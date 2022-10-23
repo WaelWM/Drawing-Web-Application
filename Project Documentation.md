@@ -374,7 +374,7 @@ const startDraw = (e) =>{
     snapshot = ctx.getImageData(0,0, canvas.width, canvas.height);
 }
 ```
-Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as a functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The 
+Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The ```startDraw``` is a const virable declared as a function that will allow drawing in the website's canvas. The function passes a trigger event "e" as a parameter, which will trigger the fucntion to run the event once triggered. Then, ```isDrawing``` virable will be equal to true to be able to start drawing. ```prevMouseX``` and ```prevMouseY``` is for passing the current mouse X axis and Y axis positions  as prevMouseX and prevMouseY values. ```ctx.beginPath()``` is used for creating new bath to path in the canvas. ```ctx.lineWidth``` is for passing the brush size as the line width. ```ctx.strokeStyle = selectedColor``` and ```ctx.fillStyle = selectedColor;``` are for passing the selected color as the brush's or shape's color and fill.
 
 
 
