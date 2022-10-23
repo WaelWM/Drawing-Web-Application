@@ -31,6 +31,13 @@ const startDraw = (e) =>{
     snapshot = ctx.getImageData(0,0, canvas.width, canvas.height);
 }
 
+//setting the width and height of the canvas so as to be able to draw in a proper way. 
+window.addEventListener("load", () =>{
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    setCanvasBackground();
+});
+
 const drawRect = (e) => {
     if(!fillColor.checked){
         return  ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
@@ -120,11 +127,6 @@ const setCanvasBackground = () =>{
     ctx.fillStyle = selectedColor; //returning the fillStyle to the selected color which is the same as the brush color.
 }
 
-window.addEventListener("load", () =>{
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-    setCanvasBackground();
-});
 
 saveImage.addEventListener("click", () => {
     const link = document.createElement("a"); // Creating the <a> element/tag
