@@ -374,8 +374,18 @@ const startDraw = (e) =>{
     snapshot = ctx.getImageData(0,0, canvas.width, canvas.height);
 }
 ```
-Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The ```startDraw``` is a const virable declared as a function that will allow drawing in the website's canvas. The function passes a trigger event "e" as a parameter, which will trigger the fucntion to run the event once triggered. Then, ```isDrawing``` virable will be equal to true to be able to start drawing. ```prevMouseX``` and ```prevMouseY``` is for passing the current mouse X axis and Y axis positions  as prevMouseX and prevMouseY values. ```ctx.beginPath()``` is used for creating new bath to path in the canvas. ```ctx.lineWidth``` is for passing the brush size as the line width. ```ctx.strokeStyle = selectedColor``` and ```ctx.fillStyle = selectedColor;``` are for passing the selected color as the brush's or shape's color and fill.
+Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The ```startDraw``` is a const virable declared as a function that will allow drawing in the website's canvas. The function passes a trigger event "e" as a parameter, which will trigger the fucntion to run the event once triggered. Then, ```isDrawing``` virable will be equal to true to be able to start drawing. ```prevMouseX``` and ```prevMouseY``` is for passing the current mouse X axis and Y axis positions  as prevMouseX and prevMouseY values. ```ctx.beginPath()``` is used for creating new bath to path in the canvas. ```ctx.lineWidth``` is for passing the brush size as the line width. ```ctx.strokeStyle = selectedColor``` and ```ctx.fillStyle = selectedColor;``` are for passing the selected color as the brush's or shape's color and fill. Meanwhile, for ```snapshot``` it is utlized to return the image data object which copis the pixel data using the ```getImageData``` method by passing the ```canvas``` width and height as parameters.
 
+```JS
+window.addEventListener("load", () =>{
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    setCanvasBackground();
+});
+```
+
+Now with the current JavaScript code, the canvas is cabable of drawing a line, but as the width and height is not defined, the drawing will not be proper. Thus, Event Listener will be added to set the height and width of the canvas as shown in the code snippet above. The ```addEventListener``` is a built-in JavaScript function that accepts an event to listen for and a second parameter that will be invoked whenever the specified event occurs. After setting the ```canvas``` width and height, the website will be able to draw a proper line after setting the ```offsetWidth``` and ```offsetHeight``` which are  measurements in pixels of the element's CSS width. ```setCanvasBackground();``` is a const defind function that will be created later to set the canvas background color to white when downlaoding the drawing as an image. Thus, the function has been called in here to change the background color to the exact height and width of the canvas.
+ 
 
 
 
