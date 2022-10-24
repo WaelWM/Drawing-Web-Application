@@ -391,6 +391,16 @@ window.addEventListener("load", () =>{
 
 Now with the current JavaScript code, the canvas will be cabable of drawing a line (after calling the ```startDraw``` and ```drawing``` functions which will be done later), but as the width and height is not defined, the drawing will not be proper. Thus, Event Listener will be added to set the height and width of the canvas as shown in the code snippet above. The ```addEventListener``` is a built-in JavaScript function that accepts an event to listen for and a second parameter that will be invoked whenever the specified event occurs. After setting the ```canvas``` width and height, the website will be able to draw a proper line after setting the ```offsetWidth``` and ```offsetHeight``` which are  measurements in pixels of the element's CSS width. ```setCanvasBackground();``` is a const defind function that will be created later to set the canvas background color to white when downlaoding the drawing as an image. Thus, the function has been called in here to change the background color with the exact height and width of the canvas.
 
+```JS
+const drawRect = (e) => {
+    if(!fillColor.checked){
+        return  ctx.strokeRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
+    }
+    ctx.fillRect(e.offsetX, e.offsetY, prevMouseX - e.offsetX, prevMouseY - e.offsetY);
+    
+}
+```
+Now after defining the const function drawing a line, it it time to define other const functions to draw the shapes one by one beginning with the rectangle shape. First a const function called ```drawRect``` has been defined, and simliar to the previous const function ```e``` has been passed as trigger event parameter. The fucntion has to functions, if the **"fill color"** option is not checked, the shape will be drawn without a fill, else if it is checked, the shape will be filled with the chosen color that will be as will programmed to do so later. The ```!fillColor.checked``` method is used to check if the checkbox of color fill is not checked so as to retun the needed method of drawing a rectangle accordingly.  ```ctx.strokeRect``` method is used to draw a rectanglerectangle by passing the needed mouse positions as showshown in the code snippet above. Similarly, if the fill color box is chekced, the ```ctx.fillRect``` method will be called to create a filled rectangle.  
 
  
 
