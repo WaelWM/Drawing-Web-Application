@@ -426,7 +426,7 @@ The third shape is the tringle shape which is defind as ```drawTriangle``` const
     ctx.stroke();
 }
 ```
-The list shape in the shapes options is "line". A const fucntion called ```drawLine``` is defind for drawing a line. Similar to the previous shape, ``ctx.moveTo``` begins a new sub-path at the point specified by the given as ```prevMouseX``` and ```prevMouseY``, and ```ctx.lineTo``` will draw a straight line using the ```e.offsetX``` ```e.offsetY``` coordinates. Lastly, ```ctx.stroke();``` is needed to be called to start drawing the straight line. Now after defining all the needed shapes, it is time pass all the shapes to a const fucntion called ```drawing``` which will hold the conditions which will specifiy which shape should be drawn in the canvas based on the option selected. And for that, event listeners are needed to do so which mentioned before, and will be done in the next steps acordlinlgy. 
+The list shape in the shapes options is "line". A const fucntion called ```drawLine``` is defind for drawing a line. Similar to the previous shape, ```ctx.moveTo``` begins a new sub-path at the point specified by the given as ```prevMouseX``` and ```prevMouseY``, and ```ctx.lineTo``` will draw a straight line using the ```e.offsetX``` ```e.offsetY``` coordinates. Lastly, ```ctx.stroke();``` is needed to be called to start drawing the straight line. Now after defining all the needed shapes, it is time pass all the shapes to a const fucntion called ```drawing``` which will hold the conditions which will specifiy which shape should be drawn in the canvas based on the option selected. And for that, event listeners are needed to do so which mentioned before, and will be done in the next steps acordlinlgy. 
  
 
 
