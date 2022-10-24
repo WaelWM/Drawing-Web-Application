@@ -377,11 +377,6 @@ const startDraw = (e) =>{
 Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The ```startDraw``` is a const virable declared as a function that will allow drawing in the website's canvas. The function passes a trigger event "e" as a parameter, which will trigger the fucntion to run the event once triggered. Then, ```isDrawing``` virable will be equal to true to be able to start drawing. ```prevMouseX``` and ```prevMouseY``` is for passing the current mouse X axis and Y axis positions  as prevMouseX and prevMouseY values. ```ctx.beginPath()``` is used for creating new bath to path in the canvas. ```ctx.lineWidth``` is for passing the brush size as the line width. ```ctx.strokeStyle = selectedColor``` and ```ctx.fillStyle = selectedColor;``` are for passing the selected color as the brush's or shape's color and fill. Meanwhile, for ```snapshot``` it is utlized to return the image data object which copis the pixel data using the ```getImageData``` method by passing the ```canvas``` width and height as parameters.
 
 ```JS
-canvas.addEventListener("mousedown", startDraw);
-```
-After creating the const defind function, the function must be called in order for it to work. As a result, an event listener will be added to the website's ```canvas``` by passing the two needed arguments and they are ```mousedown``` an event that will be triggered once the mouse is clicked, and ```startDraw``` which is calling the defind function in the previous code snippet that will do the needed action after clikcing the mouse. 
-
-```JS
 window.addEventListener("load", () =>{
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
@@ -400,8 +395,38 @@ const drawRect = (e) => {
     
 }
 ```
-Now after defining the const function drawing a line, it it time to define other const functions to draw the shapes one by one beginning with the rectangle shape. First a const function called ```drawRect``` has been defined, and simliar to the previous const function ```e``` has been passed as trigger event parameter. The fucntion has two conditions, if the **"fill color"** option is not checked, the shape will be drawn without a fill, else if it is checked, the shape will be filled with the chosen color that will be as will programmed to do so later. The ```!fillColor.checked``` method is used to check if the checkbox of color fill is not checked so as to retun the needed method of drawing a rectangle accordingly.  ```ctx.strokeRect``` method is used to draw a rectanglerectangle by passing the needed mouse positions as showshown in the code snippet above. Similarly, if the fill color box is chekced, the ```ctx.fillRect``` method will be called to create a filled rectangle.  
+Now after defining the const function drawing a line, it it time to define other const functions to draw the shapes one by one beginning with the rectangle shape. First a const function called ```drawRect``` has been defined, and simliar to the previous const function ```e``` has been passed as trigger event parameter. The fucntion has two conditions, if the **"fill color"** option is not checked, the shape will be drawn without a fill, else if it is checked, the shape will be filled with the chosen color that will be as will programmed to do so later. The ```!fillColor.checked``` method is used to check if the checkbox of color fill is not checked so as to retun the needed method of drawing a rectangle accordingly.  ```ctx.strokeRect``` method is used to draw a rectanglerectangle by passing the needed mouse positions as showshown in the code snippet above. Similarly, if the fill color box is chekced, the ```ctx.fillRect``` method will be called to create a filled rectangle. The rectangle will be drawn based on x-cordination, y-cordination, width, and height which is defind on ```ctx.strokeRect``` and ```ctx.fillRect```, and same goes to the other shapes which the passed parameters will be changed according to the shape needed.
+```JS
+const drawCircle = (e) =>{
+    ctx.beginPath();
+    let radius = Math.sqrt(Math.pow((prevMouseX - e.offsetX), 2) + Math.pow((prevMouseY - e.offsetY), 2));
+    ctx.arc(prevMouseX, prevMouseY, radius, 0, 2 * Math.PI);
+    ctx.stroke();
+    fillColor.checked ? ctx.fill(): ctx.stroke();
+}
+```
+The second cosnt function needed to be created is ```drawCicle``` const function which from it is name for drawing a circle shape. ```ctx.beginPath();``` method is used to begin a path, or reset the current path. ``` let radius``` is a defind variable to get the radius of the circle which will be calculated using ```Math.sqrt``` method to return the square root number which will allow to draw the circle according to the coordinations needed. The ```ctx.arc``` method creates an arc or curve which is used to create circles or parts of circles. Then ```ctx.stroke();``` method is called to start drawing the circle, and ```fillColor.checked ? ctx.fill(): ctx.stroke();``` is the method to check if color fill is checked, the cirlce will be filled, else the circle will be Drawn without a fill. 
 
+```JS
+const drawTriangle = (e) =>{
+    ctx.beginPath();
+    ctx.moveTo(prevMouseX, prevMouseY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.lineTo(prevMouseX * 2 - e.offsetX, e.offsetY);
+    ctx.closePath();
+    fillColor.checked ? ctx.fill(): ctx.stroke();
+}
+```
+The third shape is the tringle shape which is defind as ```drawTriangle``` const function. As usual, ```ctx.beginPath();``` method is needed to create a drawing path, ``ctx.moveTo``` method begins a new sub-path at the point specified by the given (x, y) coordinates which are ```prevMouseX``` and ```prevMouseY```.  The ```ctx.lineTo``` method is used to method adds a new point and creates a line to that point from the last specified point in the canvas which mentioned in the last code line which will draw half of the triangle shape. ```ctx.lineTo``` method will be called again to draw the other half of the tringle by passing the (x, y) coordinates as in the code snippet above which are specific coordinates for drawing the reminang half of the trinalge. ```ctx.closePath();``` is used to close the drawing path. Lastly, if the color fill check box is chekced, ```ctx.fill()``` method will be called to draw a filled trinalge, else the tringle will be without fill. 
+
+```const drawLine = (e) =>{
+    ctx.beginPath();
+    ctx.moveTo(prevMouseX, prevMouseY);
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+}
+```
+The list shape in the shapes options is "line". A const fucntion called ```drawLine``` is defind for drawing a line. Similar to the previous shape, ``ctx.moveTo``` begins a new sub-path at the point specified by the given as ```prevMouseX``` and ```prevMouseY``, and ```ctx.lineTo``` will draw a straight line using the ```e.offsetX``` ```e.offsetY``` coordinates. Lastly, ```ctx.stroke();``` is needed to be called to start drawing the straight line. Now after defining all the needed shapes, it is time pass all the shapes to a const fucntion called ```drawing``` which will hold the conditions which will specifiy which shape should be drawn in the canvas based on the option selected. And for that, event listeners are needed to do so which mentioned before, and will be done in the next steps acordlinlgy. 
  
 
 
