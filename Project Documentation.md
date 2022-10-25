@@ -1,5 +1,5 @@
 # Summary of the Project:
-This project has been developed using HTML, CSS, and JavaScript. This website is a drawing or paint website that holds many functionalities such as drawing using a different sized and colored brush and selecting a variety of shapes where the shapes can be with fill or without. Additionally, the size of the shapes and colors can be changed as well. There is also an eraser option to erase a specific draw from the canvas. Furthermore, the website provides the ability to clear all the canvas drawings, in addition, to save the drawing as an image.
+This project has been developed using HTML, CSS, and JavaScript. This website is a drawing or paint web application that holds many functionalities such as drawing using a different sized and colored brush and selecting a variety of shapes where the shapes can be with fill or without. Additionally, the size of the shapes and colors can be changed as well. There is also an eraser option to erase a specific draw from the canvas. Furthermore, the website provides the ability to clear all the canvas drawings, in addition, to save the drawing as an image.
 
 # Explanation of the Project:
 
@@ -535,7 +535,7 @@ Moving on to the last step which is save drawing as image. ```saveImage.addEvent
 
 
 # Conclusion:
-In conclusion, This Paint Website mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint website plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. And that is how to create a fully functional drawing website application. 
+In conclusion, This Paint web application mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint web application plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. And that is how to create a fully functional drawing website application. 
 ```JS
 alert("Happy Coding!")
 ```
