@@ -419,7 +419,8 @@ const drawTriangle = (e) =>{
 ```
 The third shape is the tringle shape which is defind as ```drawTriangle``` const function. As usual, ```ctx.beginPath();``` method is needed to create a drawing path, ```ctx.moveTo``` method begins a new sub-path at the point specified by the given (x, y) coordinates which are ```prevMouseX``` and ```prevMouseY```.  The ```ctx.lineTo``` method is used to method adds a new point and creates a line to that point from the last specified point in the canvas which mentioned in the last code line which will draw half of the triangle shape. ```ctx.lineTo``` method will be called again to draw the other half of the tringle by passing the (x, y) coordinates as in the code snippet above which are specific coordinates for drawing the reminang half of the trinalge. ```ctx.closePath();``` is used to close the drawing path. Lastly, if the color fill check box is chekced, ```ctx.fill()``` method will be called to draw a filled trinalge, else the tringle will be without fill. 
 
-```const drawLine = (e) =>{
+```JS
+const drawLine = (e) =>{
     ctx.beginPath();
     ctx.moveTo(prevMouseX, prevMouseY);
     ctx.lineTo(e.offsetX, e.offsetY);
@@ -427,8 +428,31 @@ The third shape is the tringle shape which is defind as ```drawTriangle``` const
 }
 ```
 The list shape in the shapes options is "line". A const fucntion called ```drawLine``` is defind for drawing a line. Similar to the previous shape, ```ctx.moveTo``` begins a new sub-path at the point specified by the given as ```prevMouseX``` and ```prevMouseY```, and ```ctx.lineTo``` will draw a straight line using the ```e.offsetX``` ```e.offsetY``` coordinates. Lastly, ```ctx.stroke();``` is needed to be called to start drawing the straight line. Now after defining all the needed shapes, it is time pass all the shapes to a const fucntion called ```drawing``` which will hold the conditions which will specifiy which shape should be drawn in the canvas based on the option selected. And for that, event listeners are needed to do so which mentioned before, and will be done in the next steps accordingly. 
- 
 
+```JS
+const drawing = (e) => {
+    if(!isDrawing) return;
+    ctx.putImageData(snapshot, 0 , 0);
+    if(selectedTool === "brush" || selectedTool === "eraser"){
+        ctx.strokeStyle = selectedTool === "eraser" ? "#f5f5f5" : selectedColor;
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+    } else if (selectedTool === "rectangle"){
+        drawRect(e); 
+    } else if (selectedTool === "circle"){
+        drawCircle(e);
+                
+    } else if (selectedTool === "triangle")  {
+        drawTriangle(e);
+    } else if (selectedTool === "line") {
+        drawLine(e);
+    }
+}
+```
+Now it is time to create a const virable named as ```drawing```. This const virable will drigger the events of the shape options including the eraser option once one of them is choosed. Then, if one if the condition is true, the specific shape const function will be called to draw the shape or use the eareser option accordingly. The first condition is ```!isDrawing``` which indicate that if the option is not drawing, then return false as the ```isDrawing``` must be selected to start drawing. The ```ctx.putImageData(snapshot, 0 , 0);``` method is used to add the canva's copied data on the canvas (paints data from the given ImageData object(snapshot) onto the canvas). The other conditon is if the selected tool is ```"brush"``` based on the id created on ```HTML``` file, or if the selected tool is ```"eraser"``` which is also based on the creatd id on ```HTML```. Thus, based on the chosen tool, it will draw or earse the drawing. ```ctx.strokeStyle``` method of the Canvas specifies the color, gradient, or pattern to use which already been specified and been specified for teh earser as well to be same as the canvas background color which is ```#f5f5f5``` or ```white smoke```. ```ctx.lineTo(e.offsetX, e.offsetY)``` as mentioned previously is used to draw a line based on the mouse positon (coordinates) given.  ```ctx.stroke();``` is called to strokes (outlines) the current or given path with the current stroke style. 
+
+Then, if the chosen shape is other than brush or erase, the selected shape based on the given id that has been created in the HTML file, const function will be called accordingly. For example, if the selected shape is tringle, the ```drawTrianlge``` const function will be called and the ```e``` passed event will be trigger to draw the shape correspondingly. And same goes on for the other shape that will be called based on the id created in the HTML and the const function that has been created as shown in the code snippet above. 
+ 
 
 
 # Conclusion:
