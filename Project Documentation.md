@@ -3,6 +3,10 @@ This project has been developed using HTML, CSS, and JavaScript. This website is
 
 # Explanation of the Project:
 
+# Assets:
+Assets is the file that contains all the images that will be used throughout The HTML coding that will be used in an ```img``` tag refering to the exact location the specific image is stored in, which will be shown in the following explanation steps of HTML. 
+
+
 # HTML:
 
 The __HTML__ is used to display the documents or details needed in a web browser. As a result, it is the main important part of this project as it holds the base structure for this website and holds the tags and classes that will be used in the **Cascading Style Sheets and Javascript languages** in order to design and add the needed functionaliies to the website accordingly. 
@@ -56,7 +60,7 @@ In the code snippet above, the decoding type has been declared to manifests as a
                   </ul>
     </div>
 ```
-Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be  called later in CSS as the class will help to only design the specific part needed. Then, a ```section``` is created which will be utlized to hold all the tools that we need for this drawing website. Inside the the section tag,  there will be the list of options that will appearin the left side of the webstie. For that there will be a need to create another ``` div ```  and initializing a class to it that will be named as a row in order to use t in the CSS to desing the layout of the list. The first row will hold multiple lists that will contain the shapes and the options to fill the shapes.  As shown in the code above, each shape has been created in a list and created a class and an id for each one. For the class it is the same for all shapes as the class will be used to desing the website in the CSS. Meanwhile for the Id, it is an imporatnt for creating the needed funtion to draw the needed shape using JavaScript. Additionally,  ```img``` and ```label``` tags are added to add the icons and names of the shapes in the website. Laslty, the fill option is an ```input``` type which holds the value of ```"checkbox"``` so when checked it will fill the shape. The ```span``` is used  to create an inline container to mark up the needed text. 
+Firstly, we need a ```div``` tag then intilizing a class to it and name the class 'contianer'. This div tag will contain all of the itmes on the web page so it will be  called later in CSS as the class will help to only design the specific part needed. Then, a ```section``` is created which will be utlized to hold all the tools that we need for this drawing website. Inside the the section tag,  there will be the list of options that will appearin the left side of the webstie. For that there will be a need to create another ``` div ```  and initializing a class to it that will be named as a row in order to use t in the CSS to desing the layout of the list. The first row will hold multiple lists that will contain the shapes and the options to fill the shapes.  As shown in the code above, each shape has been created in a list and created a class and an id for each one. For the class it is the same for all shapes as the class will be used to desing the website in the CSS. Meanwhile for the Id, it is an imporatnt for creating the needed funtion to draw the needed shape using JavaScript. Additionally,  ```img``` and ```label``` tags are added to add the icons and names of the shapes in the website. Laslty, the fill option is an ```input``` type which holds the value of ```"checkbox"``` so when checked it will fill the shape and that will be done in the JavaScript file. The ```span``` is used  to create an inline container to mark up the needed text. 
 
 ```HTML
 <div class="row">
