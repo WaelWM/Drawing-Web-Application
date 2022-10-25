@@ -454,9 +454,5 @@ Now it is time to create a const virable named as ```drawing```. This const vira
 Then, if the chosen shape is other than brush or erase, the selected shape based on the given id that has been created in the HTML file, const function will be called accordingly. For example, if the selected shape is tringle, the ```drawTrianlge``` const function will be called and the ```e``` passed event will be trigger to draw the shape correspondingly. And same goes on for the other shape that will be called based on the id created in the HTML and the const function that has been created as shown in the code snippet above.
 
 
-
-
-
-
 # Conclusion:
 In conclusion, This Paint Website mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint website plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. Overall, the website mostly utilizes The JavaScript  because of the tools that needed to add fucntions to them. Meanwhile, for HTML and CSS 
