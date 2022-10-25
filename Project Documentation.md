@@ -377,6 +377,15 @@ const startDraw = (e) =>{
 Now after defining the essential variables that will be used throught this JavaScript, it is time to add other virables that will be as functions for the tools needed in the website. ```const startDraw``` is a const virable assigned to a fucntion that will trigger an event to start drawing. The ```startDraw``` is a const virable declared as a function that will allow drawing in the website's canvas. The function passes a trigger event "e" as a parameter, which will trigger the fucntion to run the event once triggered. Then, ```isDrawing``` virable will be equal to true to be able to start drawing. ```prevMouseX``` and ```prevMouseY``` is for passing the current mouse X axis and Y axis positions  as prevMouseX and prevMouseY values. ```ctx.beginPath()``` is used for creating new bath to path in the canvas. ```ctx.lineWidth``` is for passing the brush size as the line width. ```ctx.strokeStyle = selectedColor``` and ```ctx.fillStyle = selectedColor;``` are for passing the selected color as the brush's or shape's color and fill. Meanwhile, for ```snapshot``` it is utlized to return the image data object which copis the pixel data using the ```getImageData``` method by passing the ```canvas``` width and height as parameters.
 
 ```JS
+const setCanvasBackground = () =>{
+    ctx.fillStyle = "#f5f5f5";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = selectedColor;
+}
+```
+ ```setCanvasBackground``` is a const function to set the backgorund image to white as without this const function, the saved image will be transparent (wihtout background).  ```ctx.fillStyle = "#f5f5f5";``` is used to change the background color when downloading the image so it won't be transparent. ```ctx.fillRect(0, 0, canvas.width, canvas.height);``` is utlized to fill the whole canvas with the chosen color which is white as in ```"#f5f5f5"```. ```ctx.fillStyle = selectedColor;``` is used to return he fillStyle to the selected color which is the same as the brush or shapes color. This fucntion is important to define the background color when loading and clearing the image which will be called on all of them later when adding the event listeners. 
+ 
+```JS
 window.addEventListener("load", () =>{
     canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
@@ -384,7 +393,7 @@ window.addEventListener("load", () =>{
 });
 ```
 
-Now with the current JavaScript code, the canvas will be cabable of drawing a line (after calling the ```startDraw``` and ```drawing``` functions which will be done later), but as the width and height is not defined, the drawing will not be proper. Thus, Event Listener will be added to set the height and width of the canvas as shown in the code snippet above. The ```addEventListener``` is a built-in JavaScript function that accepts an event to listen for and a second parameter that will be invoked whenever the specified event occurs. After setting the ```canvas``` width and height, the website will be able to draw a proper line after setting the ```offsetWidth``` and ```offsetHeight``` which are  measurements in pixels of the element's CSS width. ```setCanvasBackground();``` is a const defind function that will be created later to set the canvas background color to white when downlaoding the drawing as an image. Thus, the function has been called in here to change the background color with the exact height and width of the canvas.
+Now with the current JavaScript code, the canvas will be cabable of drawing a line (after calling the ```startDraw``` and ```drawing``` functions which will be done later), but as the width and height is not defined, the drawing will not be proper. Thus, Event Listener will be added to set the height and width of the canvas as shown in the code snippet above. The ```addEventListener``` is a built-in JavaScript function that accepts an event to listen for and a second parameter that will be invoked whenever the specified event occurs. After setting the ```canvas``` width and height, the website will be able to draw a proper line after setting the ```offsetWidth``` and ```offsetHeight``` which are  measurements in pixels of the element's CSS width. ```setCanvasBackground();```  const function that has been created in teh previous step has been called in here to change the background color with the exact height and width of the canvas.
 
 ```JS
 const drawRect = (e) => {
@@ -458,9 +467,68 @@ canvas.addEventListener("mousedown", startDraw);
 canvas.addEventListener("mousemove", drawing); 
 canvas.addEventListener("mouseup", () => isDrawing = false);
 ```
+Now after creating all the const functions it is time to create the event listeners as ```addEventListener``` is a very important method in order for the const fucntions to work and to draw the shapes and earse them accordingly. Same goes for the other options such as slider, color picker, clear canvas, and save drawing const functions where all of them need event listeners to function in the drawing website application.  The first event listener created here is for when ```"mousedown"``` which means when mouse is clicked. The event listener as mentioned before needs to have two parameters the trigger event, and the event that needs to be triggered or called. In the first event listener case  ```mousedown``` will trigger or call the function ```startDraw```. For the second one, when ```mousemove``` which means when the mouse is moving, the const function ```drawing``` will be called in order to draw shapes or use the brush and eareser accordingly. Lastly, ```mouseup``` is for when the mouse is not clicked on or the user stoed hold click on the left mouse, the ```isDrawing``` should be called to return false so as to stop drawing.
 
-Now after creating all the const functions it is time to create the event listeners as ```addEventListener``` is a very important method in order for the const fucntions to work and to draw the shapes and earse them accordingly. Same goes for the other options such as slider, color picker, clear canvas, and save drawing const functions where all of them need event listeners to function in the drawing website application.  The first event listener created here is for when ```"mousedown"``` which means when mouse is clicked. The event listener as mentioned before needs to have two parameters the trigger event, and the event that needs to be triggered or called. In the first event listener case  ```mousedown``` will trigger or call the function ```startDraw```. For the second one, when ```mousemove``` which means when the mouse is moving, the const function ```drawing``` will be called in order to draw shapes or use the brush and eareser accordingly. Lastly, ```mouseup``` is for when the mouse is not clicked on or the user stoed hold click on the left mouse, the ``isDrawing``` should be called to return false so as to stop drawing.
+```JS
+toolBtns.forEach(btn => {
+    btn.addEventListener("click", () => { // adding click event to all tool option
+        // removing active class from the previous option and adding on current clicked option
+        document.querySelector(".options .active").classList.remove("active");
+        btn.classList.add("active");
+        selectedTool = btn.id;
+        console.log(selectedTool);
+    });
+});
+```
+The code snippet above is for adding a click event listener for the tools options such as eraser and brush. the first parameter for the event listener is ```forEach()``` method  which calls a function for each element in an array, and the the parameter is for removing the active class from the pervious option and adding on current clicked option. ```document.querySelector(".options .active")``` will get the two classes which are  ```options``` and ```.active``` in order to remove the previous active class as in ```classList.remove("active")``` method and adds the current active one as in  ```btn.classList.add("active");``` method. ```selectedTool = btn.id;``` is for getting the id for the selected tool and ```console.log(selectedTool);``` is for printing the selected tool in the console which will allow to identify the current and previous selected tool correspondingly.
+
+```JS
+sizeSlider.addEventListener("change", () => brushWidth = sizeSlider.value);
+```
+This event listener is for the size slider to change the size of the brush, shapes, and eraser. ```"change"``` is the passed method which allows to change the size of tools by getting or passing the value from the ```sizeSlider``` as the brush or tools size as in ```brushWidth = sizeSlider.value``` method which will be triggered once the slider is moved or changed.
+
+```JS
+colors.forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector(".options .selected").classList.remove("selected");
+        btn.classList.add("selected");
+        selectedColor = (window.getComputedStyle(btn).getPropertyValue("background-color"));
+    });
+
+});
+```
+
+Similar to the ```toolBtns``` event listener, ```colors``` will also need on click event listener to remove the previous selected color and add the current on in the array list. ```document.querySelector(".options .selected")``` will get the two classes which are  ```options``` and ```.selected``` in order to remove the previous active class as in ```classList.remove("selected")``` method and adds the current active one as in  ```btn.classList.add("selected");``` method.  Now, will need to change the brush and shapes according to the selected color and the ```(window.getComputedStyle(btn).getPropertyValue("background-color"));``` method is for that. The ```Window.getComputedStyle()``` method returns an object containing the values of all CSS properties of an element which in this case will return all the colors defind for each color option created. ``getPropertyValue``` method  returns a string containing the value of a specified CSS property which will pass the selected button color as the background color. But for the last background color, as it is defind as a color picker, it needs a specific event listener which will be created on the following step.
+
+```JS
+colorPicker.addEventListener("change", () => {
+    colorPicker.parentElement.style.background = colorPicker.value;
+    colorPicker.parentElement.click();
+});
+```
+In this event listener, the ```change``` method will trigger the event to pass the picked color to the color picker button which is the last color option in the website application. The ```parentElement``` property returns the DOM node's parent Element of ```colorPicker``` which will change the brush or tools color to the picked color by passing the needed value of that color as in ```colorPicker.value```. ```colorPicker.parentElement.click();``` add the event do change the color once the user picked and clicked on the mouse to choose the color.
+
+```JS
+clearCanvas.addEventListener("click", () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    setCanvasBackground();
+})
+```
+Now moving on to the clearCanvas event listener which allows to clear all the drawing in the canvas once the clear canvas button clicked. ```ctx.clearRect``` method will clear all the drawing from the canvas by passing the needed coordinates such as the canvas width and height as in ```(0, 0, canvas.width, canvas.height)```. ```setCanvasBackground();``` is called again to set the background color after clearing the drawing. 
+
+```JS
+saveImage.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.download = `${Date.now()}.png`;
+    link.href = canvas.toDataURL();
+    link.click();
+})
+```
+Moving on to the last step which is save drawing as image. ```saveImage.addEventListener``` is used to add an event listener once the "save as image" button clicked.
+ const link = document.createElement("a"); is utilized to create a ```<a>``` element/tag which is need to create a hyperlink to save the image in a specific place in the computer. ```link.download = `${Date.now()}.png`;``` is used to pase the current canvas data  as link download value and saving the image as a (png) image format. ```link.href = canvas.toDataURL();``` is for returning the canvas data as link herf value form the added ```<a>``` tag. Last but not least.  ```link.click();``` is used to once the button is clicked, the image will be downloaded accordingly. 
+
+
 
 
 # Conclusion:
-In conclusion, This Paint Website mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint website plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. Overall, the website mostly utilizes The JavaScript  because of the tools that needed to add fucntions to them. Meanwhile, for HTML and CSS 
+In conclusion, This Paint Website mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint website plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. And that is how to create a fully functional drawing website application. ### alert("Happy Coding!").
