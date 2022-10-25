@@ -31,6 +31,12 @@ const startDraw = (e) =>{
     snapshot = ctx.getImageData(0,0, canvas.width, canvas.height);
 }
 
+const setCanvasBackground = () =>{
+    ctx.fillStyle = "#f5f5f5"; // changing the background color when downloading the image so it won't be transparent
+    ctx.fillRect(0, 0, canvas.width, canvas.height); // filling it to the width of the canvas
+    ctx.fillStyle = selectedColor; //returning the fillStyle to the selected color which is the same as the brush color.
+}
+
 //setting the width and height of the canvas so as to be able to draw in a proper way. 
 window.addEventListener("load", () =>{
     canvas.width = canvas.offsetWidth;
@@ -120,12 +126,6 @@ clearCanvas.addEventListener("click", () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     setCanvasBackground();
 })
-
-const setCanvasBackground = () =>{
-    ctx.fillStyle = "#f5f5f5"; // changing the background color when downloading the image so it won't be transparent
-    ctx.fillRect(0, 0, canvas.width, canvas.height); // filling it to the width of the canvas
-    ctx.fillStyle = selectedColor; //returning the fillStyle to the selected color which is the same as the brush color.
-}
 
 
 saveImage.addEventListener("click", () => {
