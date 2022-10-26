@@ -4,7 +4,7 @@ This project has been developed using HTML, CSS, and JavaScript. This website is
 # Demo of the Project:
 
 
-### https://waelwm.github.io/Drawing-Web-application/
+### https://waelwm.github.io/Drawing-Web-Application/
 
 
 # Explanation of the Project:
