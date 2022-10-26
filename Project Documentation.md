@@ -541,7 +541,7 @@ Moving on to the last step which is save drawing as image. ```saveImage.addEvent
 
 
 # Conclusion:
-In conclusion, This Paint web application mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint web application plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. And that is how to create a fully functional drawing website application. 
+In conclusion, This Paint web application mainly utilizes three languages to fully operate and run as it should. The HTML language used to bulid the structure of the website, the CSS language utlized to style the website application to make it appealing and in a proper design. And the last language utilized is JavaScript. JavaScript language in this paint web application plays a major role of adding the needed functaionlites of the website as without the JavaScritp code, no behaviors will be seen in the website just a website with a desing will be seen. And that is how to create a fully functional drawing web application. 
 ```JS
 alert("Happy Coding!")
 ```
